@@ -1,0 +1,36 @@
+.start-button:hover {
+    background-color: #66d8ae;
+}
+
+.game-menu-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    text-align: start;
+
+}
+
+.start-button {
+    background-color: #3da780;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+input {
+    max-width: 40px;
+}
+label {
+    text-align: start;
+}
