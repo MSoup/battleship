@@ -7,9 +7,19 @@ export default function GameMenu() {
     const [width, setWidth] = useState(7)
     const [height, setHeight] = useState(7)
 
-    const newGameInit = (x, y) => {
+    const newGameInit = () => {
         console.log("Init called")
+        const width = document.querySelector(".input-width").value
+        const height = document.querySelector(".input-height").value
 
+        if ((width > 6 && height > 6)
+            & (width < 13 && height < 13)) {
+                setWidth(width)
+                setHeight(height)
+        }
+        else {
+            console.log("Width and height must both be 7-12 (inclusive) or higher to fit ships")
+        }
     }
 
     return (
@@ -17,11 +27,11 @@ export default function GameMenu() {
             <button className="start-button" onClick={newGameInit}>New Game</button>
             <div className="input">
                 <label htmlFor="width">width</label>
-                <input name="width" onChange={(e)=> setWidth(e.target.value)}></input>
+                <input className="input-width" name="width" ></input>
             </div>
             <div className="input">
                 <label htmlFor="height">height</label>
-                <input name="height" onChange={(e)=> setHeight(e.target.value)}></input>
+                <input className="input-height" name="height" ></input>
             </div>
             <Board width={width} height={height} />
         </div>

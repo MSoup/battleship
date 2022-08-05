@@ -9,9 +9,6 @@ export default function Box(props) {
             return
         }
         setClicked(true)
-        console.log(e)
-
-
     }
     
     return <div 
