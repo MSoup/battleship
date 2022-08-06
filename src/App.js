@@ -6,9 +6,7 @@ import Dropdown from './components/Dropdown'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Dropdown />
-      </header>
+      <Dropdown />
       <h1>Battleship MVP</h1>
         <GameMenu />
     </div>
