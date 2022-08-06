@@ -4,21 +4,21 @@ import Board from "./Board"
 
 export default function GameMenu() {
     // defaults
-    const [width, setWidth] = useState(7)
-    const [height, setHeight] = useState(7)
+    const [width, setWidth] = useState(5)
+    const [height, setHeight] = useState(5)
 
     const newGameInit = () => {
         console.log("Init called")
         const width = document.querySelector(".input-width").value
         const height = document.querySelector(".input-height").value
 
-        if ((width > 6 && height > 6)
-            & (width < 13 && height < 13)) {
+        if ((width > 4 && height > 4)
+            & (width < 9 && height < 9)) {
                 setWidth(width)
                 setHeight(height)
         }
         else {
-            console.log("Width and height must both be 7-12 (inclusive) or higher to fit ships")
+            console.log("Width and height must both be 5-8 (inclusive) or higher to fit ships")
         }
     }
 
