@@ -13,7 +13,6 @@ export default function Box(props) {
     
     return <div 
         onClick={handleClick} 
-        key={props.i + "-" + props.j} 
         className={"box " + props.i + "-" + props.j}>
         </div>
 }
