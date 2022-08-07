@@ -1,5 +1,5 @@
 .start-button:hover {
-    background-color: #66d8ae;
+    background-color: #bdd2ff;
 }
 
 .game-menu-container {
@@ -10,7 +10,7 @@
 }
 
 .start-button {
-    background-color: #3da780;
+    background-color: #83a8fa;
     border: none;
     color: white;
     padding: 10px;
