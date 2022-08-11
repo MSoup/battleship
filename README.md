@@ -2,6 +2,7 @@
 
 Battleship is a Player vs AI Game where the player and AI take turns guessing the locations of each others' ships. The player who guesses (hits) all the opponent's ships first wins.  
 ## UI Layout  
+![01-onLoad.png](./src/assets/01-onLoad.png)
 The page consists of two main components  
 - The Board  
     - The board is a 7x7 grid for ships to be placed into  
@@ -11,7 +12,8 @@ The page consists of two main components
 On Page Load  
 - Player is presented with an empty 7x7 grid board  
 - Ships are presented below the board and are dragged to the board by the player  
-- When all ships are dragged out of this area and onto the board, a "start game" button appears in this area  
+- When all ships are dragged out of this area and onto the board, a "start game" button appears in this area
+![02-onReady.png](./src/assets/02-onReady.png)
 - Until "start game" is pressed, the ships can be rearranged on the board, and their orientation can be changed (default horizontal, vertical also possible)  
 
 On "Start Game"  
