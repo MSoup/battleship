@@ -1,3 +1,35 @@
+# Battleship
+
+Battleship is a Player vs AI Game where the player and AI take turns guessing the locations of each others' ships. The player who guesses (hits) all the opponent's ships first wins.  
+## UI Layout  
+The page consists of two main components  
+- The Board  
+    - The board is a 7x7 grid for ships to be placed into  
+- The Ship placement area  
+    - The ship placement area contains a render of all the available ships to be placed   
+## Game Flow  
+On Page Load  
+- Player is presented with an empty 7x7 grid board  
+- Ships are presented below the board and are dragged to the board by the player  
+- When all ships are dragged out of this area and onto the board, a "start game" button appears in this area  
+- Until "start game" is pressed, the ships can be rearranged on the board, and their orientation can be changed (default horizontal, vertical also possible)  
+
+On "Start Game"  
+- Pressing the start game button will lock the ships into place (they cannot be moved further) and allows the player to make the first move (see game flow)  
+- When the player makes a move (as defined by pressing on a grid cell), the cell gets marked as "hit" and cannot be selected again  
+- If the opponent's ship is in this cell, the opponent's ship is considered "hit"  
+- If a ship has been hit on every cell it aligns with, it is considered sunk  
+- If all ships have been sunk, the game ends  
+## Objects  
+Ships  
+- Ships take up 1 grid cell in width and have lengths determined by the ship's size:  
+    - Small: 3 cells  
+    - Medium: 4 cells  
+    - Large: 5 cells  
+- There are 2 small, 2 medium, and 1 large ship  
+- Board  
+	- The board is a grid of 7x7 cells
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
