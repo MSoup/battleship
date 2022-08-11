@@ -5,7 +5,7 @@ import { faBars, faShip } from "@fortawesome/free-solid-svg-icons";
 
 export default function Dropdown() {
     return (
-        <nav class="topnav" id="myTopnav">
+        <nav className="topnav" id="myTopnav">
             <a className="active">
                 <FontAwesomeIcon icon={faShip} />
             </a>
