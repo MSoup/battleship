@@ -6,12 +6,13 @@ Battleship is a Player vs AI Game where the player and AI take turns guessing th
 
 The page consists of two main components  
 - The Board  
-    - The board is a 7x7 grid for ships to be placed into  
+    - The board is a grid for ships to be placed into  
 - The Ship placement area  
     - The ship placement area contains a render of all the available ships to be placed   
+
 ## Game Flow  
 On Page Load  
-- Player is presented with an empty 7x7 grid board  
+- Player is presented with an empty grid board  
 - Ships are presented below the board and are dragged to the board by the player  
 - When all ships are dragged out of this area and onto the board, a "start game" button appears in this area
 ![02-onReady.png](./src/assets/02-onReady.PNG)
@@ -24,15 +25,24 @@ On "Start Game"
 - If the opponent's ship is in this cell, the opponent's ship is considered "hit"  
 - If a ship has been hit on every cell it aligns with, it is considered sunk  
 - If all ships have been sunk, the game ends  
+
 ## Objects  
-Ships  
-- Ships take up 1 grid cell in width and have lengths determined by the ship's size:  
-    - Small: 3 cells  
-    - Medium: 4 cells  
-    - Large: 5 cells  
-- There are 2 small, 2 medium, and 1 large ship  
-- Board  
-	- The board is a grid of 7x7 cells
+From a top down level, the program is structured into the following
+
+### The Game Object
+The Game object holds the state of the game. It controls the flow of the game. The Game objects holds two instances of boards, belonging to P1 and P2.
+
+### The Board object
+The board object holds the positioning of ships. Boards are represented by a nested array.
+
+### Ships  
+Ships take up 1 grid cell in width and have lengths determined by the ship's size:
+
+- Small: 3 cells  
+- Medium: 4 cells  
+- Large: 5 cells  
+
+There are 2 small, 2 medium, and 1 large ship 
 
 # Getting Started with Create React App
 
