@@ -31,17 +31,26 @@ class Board {
     }
 
 
-    // ship: Ship
+    // ship: Ship, startCoordinate: Array[int,int], endCoordinate: Array[int,int]
     placeShip(ship, startCoordinate, endCoordinate) {
-        // validate boundaries
-        if (startCoordinate[0] > this.x | endCoordinate[0] > this.x) {
-            // do stuff
-
-        }
         // validate inputs
         if (!(ship && startCoordinate && endCoordinate)) {
             throw new Error("Requires 3 parameters: Ship, startCoordinate, endCoordinate")
         }
+
+        // validate boundaries
+        if (startCoordinate[0] > this.x ||
+            endCoordinate[0] > this.x ||
+            startCoordinate[0] < 0 ||
+            endCoordinate[0] < 0 ||
+            startCoordinate[1] > this.y || 
+            endCoordinate[1] > this.y ||
+            startCoordinate[1] < 0 ||
+            endCoordinate[1] < 0) {
+
+            throw new Error("Out of bounds placement attempted")
+        }
+
         // validate direction
         if (startCoordinate[0] !== endCoordinate[0] || startCoordinate[1] !== endCoordinate[1]) {
             throw new Error("Must place vertically or horizontally")
@@ -51,7 +60,9 @@ class Board {
 
         if (startCoordinate[0] === endCoordinate[0]) {
             // X coordinates are the same, place ship horizontally
-            
+            while (shipLength > 0) {
+                
+            }
         }
         // check ship size matches end and start
         
