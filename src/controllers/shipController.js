@@ -31,6 +31,9 @@ export const ShipFactory = (shipLength) => {
         },
         isDestroyed: () => {
             return (shipBody.indexOf("0") === -1)
+        },
+        getLength: () => {
+            return shipLength
         }
     }
 }
