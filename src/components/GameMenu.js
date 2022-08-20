@@ -4,8 +4,8 @@ import Board from "./Board"
 
 export default function GameMenu() {
     // defaults
-    const [width, setWidth] = useState(5)
-    const [height, setHeight] = useState(5)
+    const [width, setWidth] = useState(7)
+    const [height, setHeight] = useState(7)
 
     const newGameInit = () => {
         console.log("Init called")
